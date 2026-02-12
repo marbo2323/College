@@ -18,6 +18,19 @@ To create a new webapp use this commmand in terminal:
 dotnet new mvc -o College
 ```
 
+## Add .gitignore
+
+To add .gitignore to the project run command:
+```shell
+dotnet new gitignore
+```
+
+## Clean previos build results
+
+```shell
+dotnet clean
+```
+
 ## Run the app
 
 Trust dev SSL certificate by using this command in terminal:
