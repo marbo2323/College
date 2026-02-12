@@ -93,6 +93,13 @@ Update the database to the latest migration
 dotnet ef database update
 ```
 
+## Subsequential migrations
+
+```shell
+dotnet ef migrations add AddDelinquent
+```
+
+
 
 
 

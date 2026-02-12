@@ -15,6 +15,7 @@ public class Delinquent
     public required string LastName { get; set; }
     public DateTime EventDate { get; set; }
     public bool isStudent { get; set; }
+    public Violation violation {get; set;}
     public required string PunishmentType { get; set; }
     public int PunishmentLenght { get; set; }
     public required string Description { get; set; }
