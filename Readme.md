@@ -63,8 +63,20 @@ Run app using `Ctrl+F5` to see if there are any problems on PROBLEMS tab.
 
 ## Scaffold pages
 
+These commaands will generate controllers and views for models to enable perform CRUD operations with given models.
+
 ```shell
+# Courses
 dotnet aspnet-codegenerator controller -name CoursesController -m Course -dc College.Data.CollegeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+
+# Departments
+dotnet aspnet-codegenerator controller -name DepartmentsController -m Department -dc College.Data.CollegeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+
+# Instructors
+dotnet aspnet-codegenerator controller -name InstructorsController -m Instructor -dc College.Data.CollegeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+
+# Delinquents
+dotnet aspnet-codegenerator controller -name DelinquentsController -m Delinquent -dc College.Data.CollegeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
 ```
 
 ## Initial Migration
