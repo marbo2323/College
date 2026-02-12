@@ -1,4 +1,4 @@
-# Creting ASP.NET MVC webapp
+# Creating ASP.NET MVC webapp
 
 [Microsoft Tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-10.0&tabs=visual-studio-code)
 
