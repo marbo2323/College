@@ -80,6 +80,9 @@ dotnet aspnet-codegenerator controller -name DelinquentsController -m Delinquent
 
 # Students
 dotnet aspnet-codegenerator controller -name StudentsController -m Student -dc College.Data.CollegeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+
+# Enrollments
+dotnet aspnet-codegenerator controller -name EnrollmentsController -m Enrollment -dc College.Data.CollegeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
 ```
 
 ## Initial Migration
