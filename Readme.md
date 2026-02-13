@@ -63,7 +63,7 @@ Run app using `Ctrl+F5` to see if there are any problems on PROBLEMS tab.
 
 ## Scaffold pages
 
-These commaands will generate controllers and views for models to enable perform CRUD operations with given models.
+These commands will generate controllers and views for models to enable perform CRUD operations with given models.
 
 ```shell
 # Courses
