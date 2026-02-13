@@ -48,8 +48,22 @@ public static class SeedData
                 );
                 context.SaveChanges();
             }
+            
+            var george = context.Student.Where(student=> student.FirstName=="George").First();
+
             var programmingBasics = context.Course.Where(course => course.Title == "Programmeerimise alused").First();
-            //Console.WriteLine("programmingBasics ID: " + programmingBasics.CourseId);
+            
+            if (!context.Enrollment.Any())
+            {
+                // DB has not been seeded with courses data
+                context.Enrollment.AddRange(
+                //new Enrollment {CourseID=1, StudentID = 1, CurrentGrade=Grade.X }
+                    
+                    
+                );
+                context.SaveChanges();
+            }
+
 
         }
 

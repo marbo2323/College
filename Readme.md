@@ -105,6 +105,9 @@ dotnet ef database update
 dotnet ef migrations add AddDelinquent
 ```
 
+## Seeding Initial Data
+
+[See Tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?view=aspnetcore-10.0&tabs=visual-studio#seed-the-database)
 
 
 
