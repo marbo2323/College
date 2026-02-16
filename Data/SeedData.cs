@@ -49,17 +49,42 @@ public static class SeedData
                 context.SaveChanges();
             }
             
-            var george = context.Student.Where(student=> student.FirstName=="George").First();
+            int george = context.Student.Where(student=> student.FirstName=="George").First().Id;
+            int among = context.Student.Where(student=> student.FirstName=="Among").First().Id;
+            int must = context.Student.Where(student=> student.FirstName=="Must").First().Id;
+            int mao = context.Student.Where(student=> student.FirstName=="Mao").First().Id;
+            int benito = context.Student.Where(student=> student.FirstName=="Benito").First().Id;
+            int antony = context.Student.Where(student=> student.FirstName=="Antony").First().Id;
+            int cristiano = context.Student.Where(student=> student.FirstName=="Cristiano").First().Id;
+            int donald = context.Student.Where(student=> student.FirstName=="Donald").First().Id;
 
-            var programmingBasics = context.Course.Where(course => course.Title == "Programmeerimise alused").First();
+            int programmingBasics = context.Course.Where(course => course.Title == "Programmeerimise alused").First().CourseId;
+            int programming1 = context.Course.Where(course => course.Title == "Programmeerimine 1").First().CourseId;
+            int programming2 = context.Course.Where(course => course.Title == "Programmeerimine 2").First().CourseId;
+            int devProcess = context.Course.Where(course => course.Title == "Tarkvara Arendusprotsess").First().CourseId;
+            int multimedia = context.Course.Where(course => course.Title == "Multimeedia").First().CourseId;
+            int distAppDev = context.Course.Where(course => course.Title == "Hajusrakenduste Arendus").First().CourseId;
             
             if (!context.Enrollment.Any())
             {
                 // DB has not been seeded with courses data
                 context.Enrollment.AddRange(
-                //new Enrollment {CourseID=1, StudentID = 1, CurrentGrade=Grade.X }
-                    
-                    
+                    new Enrollment { StudentID = george, CourseID=programmingBasics, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = george, CourseID=programming1, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = george, CourseID=programming2, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = among, CourseID=programmingBasics, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = among, CourseID=devProcess, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = among, CourseID=distAppDev, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = must, CourseID=programming1, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = must, CourseID=distAppDev, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = mao, CourseID=multimedia, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = mao, CourseID=programming2, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = benito, CourseID=programming1, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = benito, CourseID=multimedia, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = donald, CourseID=multimedia, CurrentGrade=Grade.X },
+                    new Enrollment { StudentID = donald, CourseID=distAppDev, CurrentGrade=Grade.X },                    
+                    new Enrollment { StudentID = antony, CourseID=distAppDev, CurrentGrade=Grade.X },                   
+                    new Enrollment { StudentID = cristiano, CourseID=distAppDev, CurrentGrade=Grade.X }                  
                 );
                 context.SaveChanges();
             }
